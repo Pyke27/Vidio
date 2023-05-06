@@ -1,0 +1,18 @@
+<!-- base.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Audio Files{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>My Audio App</h1>
+        {% include 'search_form.html' %}
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

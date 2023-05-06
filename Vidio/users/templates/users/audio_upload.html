@@ -1,0 +1,42 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+<div class="form-content my-3 p-3">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5">
+        <div class="card shadow-lg border-0 rounded-lg mt-0 mb-3">
+          <div class="card-header justify-content-center bg-primary text-white">
+            <h3 class="font-weight-light my-1 text-center">Upload Audio</h3>
+          </div>
+          <div class="card-body">
+            <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="{{ form.audio.id_for_label }}" class="font-weight-bold">Audio file:</label>
+                {{ form.audio }}
+              </div>
+              <div class="form-group">
+                <label for="{{ form.Village.id_for_label }}" class="font-weight-bold">Village:</label>
+                {{ form.Village }}
+              </div>
+              <div class="form-group">
+                <label for="{{ form.description.id_for_label }}" class="font-weight-bold">Description:</label>
+                {{ form.description }}
+              </div>
+              <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
+
